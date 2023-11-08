@@ -11,8 +11,8 @@
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <junit.bom.version>5.9.1</junit.bom.version>
-        <mockito.bom.version>4.8.1</mockito.bom.version>
+        <junit.bom.version>5.10.1</junit.bom.version>
+        <mockito.bom.version>5.7.0</mockito.bom.version>
     </properties>
 
     <dependencyManagement> <!-- helps maven to resolve conflicting transitive dependencies -->
@@ -42,23 +42,22 @@
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
-            <artifactId>mockito-inline
-            </artifactId> <!-- use mockito-line insted of mockito-core to be able to mock static methods -->
+            <artifactId>mockito-core</artifactId>
             <scope>test</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- JUnit 5.9.1 requires maven surefire 3.0.0-M6 / maven compiler 3.8.1 -->
+            <!-- JUnit 5.10.1 requires maven surefire 3.2.1 -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.11.0</version>
             </plugin>
 
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M6</version>
+                <version>3.2.1</version>
             </plugin>
         </plugins>
     </build>
