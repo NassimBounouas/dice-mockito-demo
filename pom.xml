@@ -4,14 +4,14 @@
 
     <groupId>PNS-project</groupId>
     <artifactId>Dice</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>17</java.version>
+        <java.version>21</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <junit.bom.version>5.10.1</junit.bom.version>
+        <junit.bom.version>5.11.2</junit.bom.version>
         <mockito.bom.version>5.7.0</mockito.bom.version>
     </properties>
 
@@ -49,15 +49,15 @@
 
     <build>
         <plugins>
-            <!-- JUnit 5.10.1 requires maven surefire 3.2.1 -->
+            <!-- JUnit 5.11.2 requires maven surefire 3.5.1 -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.13.0</version>
             </plugin>
 
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>3.5.1</version>
             </plugin>
         </plugins>
     </build>
